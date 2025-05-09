@@ -23,21 +23,45 @@ const Sidebar = () => {
     { title: "Галерея", path: "/gallery" },
   ];
 
+  const tools = [
+    { title: "Басып шығару", path: "#" },
+    { title: "Экспорттау", path: "#" },
+    { title: "Сақтау", path: "#" },
+  ];
+
   return (
-    <div className="hidden md:block w-64">
+    <div className="hidden md:block w-64 bg-gray-50 border-r border-gray-200">
       <ShadcnSidebar collapsible="icon">
         <SidebarContent>
-          <SidebarHeader className="border-b border-border">
-            <h2 className="text-lg font-medium p-4">Мазмұны</h2>
+          <SidebarHeader className="border-b border-gray-200">
+            <div className="p-4 bg-gray-100">
+              <h2 className="text-lg font-serif">Мазмұны</h2>
+            </div>
           </SidebarHeader>
+          
           <SidebarGroup>
-            <SidebarGroupLabel>Химиялық байланыстар</SidebarGroupLabel>
+            <SidebarGroupLabel className="font-serif text-sm">Химиялық байланыстар</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {pages.map((page) => (
                   <SidebarMenuItem key={page.path}>
                     <SidebarMenuButton asChild>
-                      <Link to={page.path}>{page.title}</Link>
+                      <Link to={page.path} className="font-serif">{page.title}</Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+          
+          <SidebarGroup>
+            <SidebarGroupLabel className="font-serif text-sm">Құралдар</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {tools.map((tool) => (
+                  <SidebarMenuItem key={tool.title}>
+                    <SidebarMenuButton asChild>
+                      <Link to={tool.path} className="font-serif">{tool.title}</Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}

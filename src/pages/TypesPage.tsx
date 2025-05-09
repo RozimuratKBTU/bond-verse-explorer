@@ -1,78 +1,149 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TypesPage = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">Химиялық байланыс түрлері</h1>
-      
-      <div className="grid md:grid-cols-3 gap-8">
-        {/* Иондық байланыс */}
-        <div className="border rounded-lg shadow-md overflow-hidden">
-          <div className="bg-primary text-primary-foreground p-4">
-            <h2 className="text-xl font-semibold">Иондық байланыс</h2>
-          </div>
-          <div className="p-4">
-            <img 
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-              alt="Иондық байланыс" 
-              className="w-full h-48 object-cover mb-4 rounded"
-            />
-            <p className="mb-4">
-              Иондық байланыс — электрондарды бір атомнан екінші атомға толық беру арқылы пайда болады. 
-              Бұл процесте бір атом электрон(дар) береді және оң зарядталған ионға айналады, ал екіншісі 
-              электрон(дар) қабылдап, теріс зарядталған ионға айналады.
-            </p>
-            <p className="font-medium">Мысал: натрий хлориді (NaCl)</p>
-          </div>
-        </div>
-        
-        {/* Коваленттік байланыс */}
-        <div className="border rounded-lg shadow-md overflow-hidden">
-          <div className="bg-primary text-primary-foreground p-4">
-            <h2 className="text-xl font-semibold">Коваленттік байланыс</h2>
-          </div>
-          <div className="p-4">
-            <img 
-              src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" 
-              alt="Коваленттік байланыс" 
-              className="w-full h-48 object-cover mb-4 rounded"
-            />
-            <p className="mb-4">
-              Коваленттік байланыс — екі атом электрон жұбын бөліскенде пайда болады. Бөліскен 
-              электрондар екі атомның ядроларына тартылып, оларды бір-біріне байлайды.
-            </p>
-            <p className="font-medium">Мысал: су молекуласы (H₂O)</p>
-          </div>
-        </div>
-        
-        {/* Металдық байланыс */}
-        <div className="border rounded-lg shadow-md overflow-hidden">
-          <div className="bg-primary text-primary-foreground p-4">
-            <h2 className="text-xl font-semibold">Металдық байланыс</h2>
-          </div>
-          <div className="p-4">
-            <img 
-              src="https://plus.unsplash.com/premium_photo-1682096122304-fa650dbc5c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-              alt="Металдық байланыс" 
-              className="w-full h-48 object-cover mb-4 rounded"
-            />
-            <p className="mb-4">
-              Металдық байланыс — металл атомдарының валенттік электрондары еркін қозғалып, бүкіл металл 
-              бойына "электрондық теңіз" түзеді. Бұл электрондар оң зарядталған металл иондарын 
-              байланыстырады.
-            </p>
-            <p className="font-medium">Мысал: темір (Fe), алтын (Au)</p>
-          </div>
+      <div className="mb-6 pb-4 border-b border-gray-200">
+        <h1 className="text-3xl font-bold">Химиялық байланыс түрлері</h1>
+        <div className="flex justify-end text-sm text-blue-600">
+          <Link to="#" className="hover:underline mx-2">Талқылау</Link>
+          <Link to="#" className="hover:underline mx-2">Өңдеу</Link>
+          <Link to="#" className="hover:underline mx-2">Тарихы</Link>
         </div>
       </div>
       
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Байланыс түрлерінің салыстырмалы сипаттамалары</h2>
+      <div className="table-of-contents mb-8 border border-gray-200 p-4 bg-gray-50">
+        <h2 className="font-semibold mb-2">Мазмұны</h2>
+        <ul className="list-decimal pl-6 text-blue-600">
+          <li className="mb-1"><a href="#ionic" className="hover:underline">Иондық байланыс</a></li>
+          <li className="mb-1"><a href="#covalent" className="hover:underline">Коваленттік байланыс</a></li>
+          <li><a href="#metallic" className="hover:underline">Металдық байланыс</a></li>
+        </ul>
+      </div>
+      
+      <p className="mb-6 text-justify">
+        Химиялық байланыс түрі атомдардың электронтерістілігіне және электрондардың өзара әрекеттесу сипатына байланысты 
+        анықталады. Химияда үш негізгі байланыс түрі бар: иондық, коваленттік және металдық.
+      </p>
+      
+      <div id="ionic" className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Иондық байланыс</h2>
+        
+        <div className="float-right ml-6 mb-4 w-1/3 border border-gray-200 bg-white p-2">
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NaCl_polyhedra.png/330px-NaCl_polyhedra.png" 
+            alt="Натрий хлориді құрылымы" 
+            className="w-full"
+          />
+          <p className="text-sm text-gray-600 mt-2 text-center">Натрий хлориді (NaCl) құрылымы</p>
+        </div>
+        
+        <p className="mb-4 text-justify">
+          <strong>Иондық байланыс</strong> — электрондарды бір атомнан екіншісіне толық беру арқылы жүзеге асады. 
+          Бұл процесте әдетте металл атомы электронын бейметалл атомына береді, нәтижесінде оң және теріс 
+          зарядталған иондар пайда болады.
+        </p>
+        
+        <p className="mb-4 text-justify">
+          Иондық байланыстың негізгі белгілері:
+        </p>
+        
+        <ul className="list-disc pl-6 mb-4">
+          <li className="mb-2">Электронтерістілігі жоғары айырмашылық (әдетте 1.7-ден астам)</li>
+          <li className="mb-2">Бір атомнан екінші атомға электрондардың толық берілуі</li>
+          <li className="mb-2">Оң және теріс иондардың пайда болуы</li>
+          <li>Кристалдық тор құрылымының түзілуі</li>
+        </ul>
+        
+        <p className="text-justify">
+          Иондық қосылыстар қатты күйінде электр тогын өткізбейді, бірақ ерітіндіде немесе балқытылған 
+          күйінде электр өткізгіш болып табылады. Мысалы: натрий хлориді (NaCl), калий йодиді (KI), 
+          магний оксиді (MgO).
+        </p>
+      </div>
+      
+      <div id="covalent" className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Коваленттік байланыс</h2>
+        
+        <div className="float-right ml-6 mb-4 w-1/3 border border-gray-200 bg-white p-2">
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/3D_model_hydrogen_bonds_in_water.svg/450px-3D_model_hydrogen_bonds_in_water.svg.png" 
+            alt="Су молекуласындағы коваленттік байланыс" 
+            className="w-full"
+          />
+          <p className="text-sm text-gray-600 mt-2 text-center">Су молекуласындағы коваленттік байланыс (H₂O)</p>
+        </div>
+        
+        <p className="mb-4 text-justify">
+          <strong>Коваленттік байланыс</strong> — екі атом электрон жұбын бөліскен кезде пайда болатын 
+          химиялық байланыс түрі. Бұл электрондар екі атомның да ядроларына бір уақытта тартылып, оларды 
+          бір-біріне байланыстырады.
+        </p>
+        
+        <p className="mb-4 text-justify">
+          Коваленттік байланыстың түрлері:
+        </p>
+        
+        <ul className="list-disc pl-6 mb-4">
+          <li className="mb-2">
+            <strong>Полярлы коваленттік байланыс</strong> — әр түрлі электронтерістілігі бар атомдар арасындағы байланыс 
+            (мысалы, HCl молекуласындағы H-Cl байланысы)
+          </li>
+          <li>
+            <strong>Полярсыз коваленттік байланыс</strong> — бірдей электронтерістілігі бар атомдар арасындағы байланыс 
+            (мысалы, H₂, O₂, N₂ молекулаларындағы байланыстар)
+          </li>
+        </ul>
+        
+        <p className="text-justify">
+          Коваленттік байланыстың қасиеттері: жоғары беріктік, бағыттылық, қанықтылық. Мысалы: метан (CH₄), 
+          су (H₂O), аммиак (NH₃).
+        </p>
+      </div>
+      
+      <div id="metallic" className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Металдық байланыс</h2>
+        
+        <div className="float-right ml-6 mb-4 w-1/3 border border-gray-200 bg-white p-2">
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Metal_crystal_structure_bcc.svg/330px-Metal_crystal_structure_bcc.svg.png" 
+            alt="Металдық кристалдық тор" 
+            className="w-full"
+          />
+          <p className="text-sm text-gray-600 mt-2 text-center">Металдың кристалдық торы (ОЦК)</p>
+        </div>
+        
+        <p className="mb-4 text-justify">
+          <strong>Металдық байланыс</strong> — металл атомдарының валенттік электрондары еркін қозғалып, бүкіл металл 
+          бойына "электрондық теңіз" түзеді. Бұл электрондар оң зарядталған металл иондарын байланыстырады.
+        </p>
+        
+        <p className="mb-4 text-justify">
+          Металдық байланыстың қасиеттері:
+        </p>
+        
+        <ul className="list-disc pl-6 mb-4">
+          <li className="mb-2">Электр тогын жақсы өткізеді</li>
+          <li className="mb-2">Жылуды жақсы өткізеді</li>
+          <li className="mb-2">Жылтырлық</li>
+          <li className="mb-2">Илемділік және соққылық</li>
+          <li>Жоғары балқу температуралары (көптеген металлдар үшін)</li>
+        </ul>
+        
+        <p className="text-justify">
+          Таза металлдар (мысалы, темір, мыс, алтын) және көптеген металл қорытпалары металдық 
+          байланыстарды көрсетеді.
+        </p>
+      </div>
+      
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Байланыс түрлерінің салыстырмалы сипаттамалары</h2>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-secondary">
+              <tr className="bg-gray-100">
                 <th className="border p-2 text-left">Байланыс түрі</th>
                 <th className="border p-2 text-left">Түзілу механизмі</th>
                 <th className="border p-2 text-left">Беріктігі</th>
@@ -101,6 +172,22 @@ const TypesPage = () => {
             </tbody>
           </table>
         </div>
+      </div>
+      
+      <div className="bg-gray-100 p-4 border border-gray-200">
+        <h3 className="text-lg font-semibold mb-2">Сыртқы сілтемелер</h3>
+        <ul className="list-disc pl-6">
+          <li className="mb-1">
+            <a href="https://en.wikipedia.org/wiki/Chemical_bond" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
+              Chemical bond - Wikipedia
+            </a>
+          </li>
+          <li>
+            <a href="https://www.acs.org" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
+              American Chemical Society
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
